@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renaissance Marketing Group</title>
+    <title>Webtivity Designs - Digital Marketing Agency</title>
+    <meta name="description" content="Webtivity Designs - Elevating Your Digital Presence. Expert digital marketing services to grow your brand.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
@@ -572,7 +573,7 @@
         }
 
         .loader-logo {
-            font-size: 3.5rem;
+            font-size: 2.8rem; 
             font-weight: 800;
             background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--primary));
             background-size: 300% 300%;
@@ -582,6 +583,16 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: var(--spacing-sm);
             opacity: 0;
+            line-height: 1.1;
+        }
+        .loader-logo .main-name {
+            display: block;
+        }
+        .loader-logo .sub-name {
+            display: block;
+            font-size: 0.6em; 
+            font-weight: 500; 
+             letter-spacing: 0.05em;
         }
 
         .loader-text {
@@ -646,29 +657,27 @@
             align-items: center;
         }
 
-        .logo {
+        .logo-header { 
             font-weight: 800;
-            font-size: 2rem;
+            font-size: 1.6rem; /* Adjusted for "Webtivity Designs" */
             font-family: var(--font-secondary);
             color: var(--text-light);
             position: relative;
             z-index: 2;
+            line-height: 1; 
         }
 
-        .logo span {
-            color: var(--primary);
-            position: relative;
+        .logo-header .main-name { 
+            display: block;
         }
-        
-        .logo span::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--accent);
-            bottom: 0;
-            right: -8px;
+
+        .logo-header .sub-name { 
+            display: block;
+            font-size: 0.7em; 
+            font-weight: 500; 
+            color: var(--primary); 
+            letter-spacing: 0.05em;
+            margin-top: 0.1em; 
         }
 
         .nav-links {
@@ -869,15 +878,20 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            top: 0;
-            left: 0;
+            top: 15px;
+            left: -15px;
             border: 2px solid var(--primary);
             border-radius: var(--border-radius-lg);
-            transform: translateZ(-20px);
-            filter: blur(4px);
-            opacity: 0.6;
+            z-index: -1;
+            transition: var(--transition-medium);
         }
 
+        .hero-image:hover::before {
+            top: 10px;
+            left: -10px;
+            border-color: var(--primary);
+        }
+        
         .hero-image::after {
             content: '';
             position: absolute;
@@ -2038,7 +2052,7 @@
 
         .footer-logo {
             font-weight: 800;
-            font-size: 2rem;
+            font-size: 1.8rem; /* Adjusted for "Webtivity Designs" */
             font-family: var(--font-secondary);
             margin-bottom: var(--spacing-sm);
             background: linear-gradient(90deg, var(--primary), var(--secondary));
@@ -2046,7 +2060,18 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+            line-height: 1;
         }
+        .footer-logo .main-name { display: block; }
+        .footer-logo .sub-name {
+            display: block;
+            font-size: 0.7em; /* Smaller for sub-name */
+            font-weight: 500; /* Lighter weight */
+            color: var(--secondary); 
+            letter-spacing: 0.05em;
+            margin-top: 0.1em;
+        }
+
 
         .footer-about p {
             color: var(--text-dim);
@@ -2363,7 +2388,7 @@
     <!-- Loader -->
     <div class="loader">
         <div class="loader-content">
-            <div class="loader-logo">RENAISSANCE</div>
+            <div class="loader-logo"><span class="main-name">Webtivity</span><span class="sub-name">Designs</span></div>
             <div class="loader-text">Crafting Digital Experiences</div>
             <div class="loader-progress-container">
                 <div class="loader-progress"></div>
@@ -2375,7 +2400,9 @@
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="logo">RENAI<span>SSANCE</span></div>
+                 <a href="https://www.webtivitydesigns.com/" class="logo-link-override">
+                   <h2 class="logo-header"><span class="main-name">Webtivity</span><span class="sub-name">Designs</span></h2>
+                </a>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="#home" class="nav-link active">Home</a></li>
@@ -2406,7 +2433,7 @@
                     <span>Transform Your</span>
                     <span class="accent-line">Digital Presence</span>
                 </h1>
-                <p class="hero-paragraph">We create cutting-edge digital experiences that elevate brands, drive engagement, and deliver measurable results in an ever-evolving digital landscape.</p>
+                <p class="hero-paragraph">We create cutting-edge digital experiences that elevate brands, drive engagement, and deliver measurable results in an ever-evolving digital landscape with Webtivity Designs.</p>
                 <div class="hero-buttons">
                     <div class="btn-wrapper">
                         <a href="#services" class="btn btn-glow">Explore Services</a>
@@ -2443,20 +2470,20 @@
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Who We Are</div>
-                <h2 class="section-title">About <span>Renaissance</span></h2>
+                <h2 class="section-title">About <span>Webtivity Designs</span></h2>
             </div>
             
             <div class="about-wrapper">
                 <div class="about-image-wrapper">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="About Renaissance">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="About Webtivity Designs">
                     </div>
                 </div>
                 
                 <div class="about-content">
-                    <span class="about-handwritten">Welcome to Renaissance</span>
+                    <span class="about-handwritten">Welcome to Webtivity Designs</span>
                     <h3>We Craft Digital Success Stories</h3>
-                    <p>Renaissance is a forward-thinking digital marketing agency dedicated to transforming businesses through innovative digital strategies. With years of experience and a passion for excellence, we've helped countless brands achieve remarkable growth in the digital landscape.</p>
+                    <p>Webtivity Designs is a forward-thinking digital marketing agency dedicated to transforming businesses through innovative digital strategies. With years of experience and a passion for excellence, we've helped countless brands achieve remarkable growth in the digital landscape.</p>
                     <p>Our multi-disciplinary team of experts combines creative thinking with data-driven insights to deliver tailored solutions that exceed expectations and drive tangible results.</p>
                     
                     <ul class="about-list">
@@ -2705,7 +2732,7 @@
             </div>
             
             <div class="testimonial-intro">
-                <p>Hear directly from our clients about their experience working with Renaissance and the results we've delivered for their businesses.</p>
+                <p>Hear directly from our clients about their experience working with Webtivity Designs and the results we've delivered for their businesses.</p>
             </div>
             
             <div class="testimonial-container">
@@ -2714,7 +2741,7 @@
                         <div class="testimonial-card">
                             <div class="testimonial-quote">"</div>
                             <div class="testimonial-content">
-                                Renaissance transformed our digital presence. Their approach to marketing campaigns resulted in a 200% increase in qualified leads and a significant boost in conversion rates. Their team is incredibly skilled and a pleasure to work with.
+                                Webtivity Designs transformed our digital presence. Their approach to marketing campaigns resulted in a 200% increase in qualified leads and a significant boost in conversion rates. Their team is incredibly skilled and a pleasure to work with.
                             </div>
                             <div class="testimonial-author">
                                 <div class="author-image">
@@ -2729,7 +2756,7 @@
                         <div class="testimonial-card back">
                             <div class="testimonial-quote">"</div>
                             <div class="testimonial-content">
-                                Working with Renaissance has been a game-changer for our brand. Their team developed a stunning visual identity that captured our values, and their marketing strategies helped us build a loyal community around our products. Extremely happy with the results!
+                                Working with Webtivity Designs has been a game-changer for our brand. Their team developed a stunning visual identity that captured our values, and their marketing strategies helped us build a loyal community around our products. Extremely happy with the results!
                             </div>
                             <div class="testimonial-author">
                                 <div class="author-image">
@@ -2803,7 +2830,7 @@
                             </div>
                             <div class="contact-info">
                                 <div class="contact-label">Email Address</div>
-                                <div class="contact-text">info@renaissanceagency.com</div>
+                                <div class="contact-text">info@webtivitydesigns.com</div>
                             </div>
                         </li>
                         <li class="contact-item">
@@ -2844,7 +2871,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-about">
-                    <div class="footer-logo">RENAISSANCE</div>
+                    <div class="footer-logo"><span class="main-name">Webtivity</span><span class="sub-name">Designs</span></div>
                     <p>We help businesses transform their digital presence through innovative marketing strategies and cutting-edge web solutions.</p>
                     <div class="footer-social">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -2889,7 +2916,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Renaissance Digital Marketing Agency. All Rights Reserved.</p>
+                <p>&copy; 2023 Webtivity Designs. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
